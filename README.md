@@ -22,25 +22,43 @@ From here we begin to look at summary statistics and develop box and whisker cha
 
 ### Results
 Fig. 1:
+
 ![](analysis/Fig1.png)
+
 Fig. 2:
+
 ![](analysis/Fig2.png)
+
 Fig. 3:
+
 ![](analysis/Fig3.png)
+
 Fig. 4:
+
 ![](analysis/Fig4.png)
+
 Fig. 5:
+
 ![](analysis/Fig5.png)
+
 Fig. 6:
+
 ![](analysis/Fig6.png)
+
 Fig. 7:
+
 ![](analysis/Fig7.png)
+
 Fig. 8:
+
 ![](analysis/Fig9.png)
+
 
 ### Summary
 As expected, there are fewer rides and fewer drivers in the rural and suburban areas as compared to the urban areas.  As shown in Fig. 9, As expected fares to increase as we move away from the urban areas since the rides in suburban and rural areas tend to cover greater distances.  
+
 Fig. 9:
+
 ![](analysis/Fig8.png)
 
 
@@ -49,14 +67,17 @@ Fig. 9:
 ### Challenges and Difficulties Encountered
 
 * Programming:  One of the largest programming challenges for me was figuring out that I did not need to "unpack" the Date column from the index in order to change its datatype to datetime.  This was accomplished with the code below.
+
 ![](analysis/PC1.png)
 
 * Programming:  Another challenge was researching and discovering the pandas pivot_table function.  This was used to reconfigure the dataframe to set up the weekly bins that would be used for plotting the multi-line chart.
+
 ![](analysis/PC2.png)
 
 * Data analysis:  Once the datasets are merged, the number of drivers for each city is duplicated throughout the dataframe (i.e. each instance of a city will show the number of drivers).  To overcome this, we must use the city data dataframe to calculate the total number of drivers per city type.  If the programmer does not recognize this, there will be a large error in the results.
 
 * Graphing, etc:  A lot of time was spent formatting the multi-line chart.  My largest challenge in this area was uncovering how to change the format of the timestamp x-axis labels to simply show the month abbreviation.  I discovered matplotlib.dates and, after reading some of the documentation, was able to use the DateFormatter to get the desired format.
+
 ![](analysis/PC3.png)
 
 ### Technical Analyses Used
