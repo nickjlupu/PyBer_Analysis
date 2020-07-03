@@ -96,31 +96,31 @@ As
 
 ### Additional Analysis 1
 
-* Description of Approach
+* Description of Approach<br>
 As shown in the boxplots of Driver Counts, there is a lot of variation in the number of Urban drivers (see Fig. 4 above).  Which cities have the most drivers?  How do ride counts and total fares stack up to the number of drivers by city?  
 
-* Technical Steps
-Create bar chart for driver count by city
-Format and sort to show city with highest driver count to lowest
-Look in the Urban cities dataframe, groupby city, sum fares
-Create bar chart for total fares by city
-Look in the Urban cities dataframe, groupby city, count rides
-Create bar chart for total rides by city
-Combine bar charts and format accordingly (investigate multi-axes charts)
-Depending on outcome, use average fare instead of total fare
+* Technical Steps<br>
+  * Create bar chart for driver count by city
+  * Format and sort to show city with highest driver count to lowest
+  * Look in the Urban cities dataframe, groupby city, sum fares
+  * Create bar chart for total fares by city
+  * Look in the Urban cities dataframe, groupby city, count rides
+  * Create bar chart for total rides by city
+  * Combine bar charts and format accordingly (investigate multi-axes charts)
+  * Depending on outcome, use average fare instead of total fare
 
 ### Additional Analysis 2
 
-* Description of Approach
+* Description of Approach<br>
 In order to optimize the number of drivers, we should look at the pattern over time that the number of drivers follow.  Do the number of drivers follow the same trend every week?  every day?  Unfortunately, the data provided only shows a static number of drivers per city.  If we are to ascertain the staffing level of drivers over time, we would need to have data on the number of drivers at the time of each ride.
 
-* Technical Steps
-Request data tracking 
-Receive csv's, read into a dataframe
-Inspect for missing data and explore data provided
-Merge datasets if necessary
-Groupby cities
-Set index to datetime
-Create pivot table to show data over time by city
-Resample data to create weekly and then daily bins
-Plot data on multi-line chart
+* Technical Steps<br>
+  * Request data tracking 
+  * Receive csv's, read into a dataframe
+  * Inspect for missing data and explore data provided
+  * Merge datasets if necessary
+  * Groupby cities
+  * Set index to datetime
+  * Create pivot table to show data over time by city
+  * Resample data to create weekly and then daily bins
+  * Plot data on multi-line chart
