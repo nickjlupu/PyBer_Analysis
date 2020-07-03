@@ -10,7 +10,7 @@ The analysis begins with 2 csv files.  The first contains data of city names, nu
 ![](analysis/ReadCSV.png)
 ![](analysis/isnull.png)
 
-Once the datasets are inspected, they are combined with the pandas merge function.<br>  
+Once the datasets are inspected and explored, they are combined with the pandas merge function.<br>  
 ![](analysis/merge.png)
 
 After the dataframes are merged, we can subset the data into additional dataframes and use the groupby function to gather counts and means that will be used as the x & y axes for scatter & bubble plots.<br>
@@ -50,20 +50,21 @@ Pie charts are developed to show percentages of total fares, number of rides, an
 
 A summary dataframe is built, formatted, and displayed.  Finally, a multi-line chart is developed by organizing the data using pandas pivot_table and resample functions to create weekly bins of data.  A great deal of formatting was done to create an attractive chart.  
 
-### Results
-
+### Results & Summary
+As expected, there are fewer rides and fewer drivers in the rural and suburban areas as compared to the urban areas.  Average fares increase as we move away from the urban areas since the rides in suburban and rural areas tend to cover greater distances.  <br>
 
 **Fig. 8:**<br>
+
+![](analysis/Fig8.png)<br>
+
+As
+
+**Fig. 9:**<br>
 
 ![](analysis/Fig9.png)
 
 
 ### Summary
-As expected, there are fewer rides and fewer drivers in the rural and suburban areas as compared to the urban areas.  Fares increase as we move away from the urban areas since the rides in suburban and rural areas tend to cover greater distances.  <br>
-
-**Fig. 9:**<br>
-
-![](analysis/Fig8.png)<br>
 
 
 
@@ -96,12 +97,30 @@ As expected, there are fewer rides and fewer drivers in the rural and suburban a
 ### Additional Analysis 1
 
 * Description of Approach
-In order to optimize the number of drivers 
+As shown in the boxplots of Driver Counts, there is a lot of variation in the number of Urban drivers (see Fig. 4 above).  Which cities have the most drivers?  How do ride counts and total fares stack up to the number of drivers by city?  
 
 * Technical Steps
+Create bar chart for driver count by city
+Format and sort to show city with highest driver count to lowest
+Look in the Urban cities dataframe, groupby city, sum fares
+Create bar chart for total fares by city
+Look in the Urban cities dataframe, groupby city, count rides
+Create bar chart for total rides by city
+Combine bar charts and format accordingly (investigate multi-axes charts)
+Depending on outcome, use average fare instead of total fare
 
 ### Additional Analysis 2
 
 * Description of Approach
+In order to optimize the number of drivers, we should look at the pattern over time that the number of drivers follow.  Do the number of drivers follow the same trend every week?  every day?  Unfortunately, the data provided only shows a static number of drivers per city.  If we are to ascertain the staffing level of drivers over time, we would need to have data on the number of drivers at the time of each ride.
 
 * Technical Steps
+Request data tracking 
+Receive csv's, read into a dataframe
+Inspect for missing data and explore data provided
+Merge datasets if necessary
+Groupby cities
+Set index to datetime
+Create pivot table to show data over time by city
+Resample data to create weekly and then daily bins
+Plot data on multi-line chart
