@@ -57,18 +57,11 @@ As expected, there are fewer rides and fewer drivers in the rural and suburban a
 
 ![](analysis/Fig8.png)<br>
 
-As
+The multi-line chart shows the same phenomenon.  The Urban fares are highest, and the fares decrease as we move into the Suburbs and Rural areas.  The trend over time appears to be stable and flat.  However, this data is only the first 4 months of the year.  It would be interesting to see how the data looks over the remainder of the year.  
 
 **Fig. 9:**<br>
 
 ![](analysis/Fig9.png)
-
-
-### Summary
-
-
-
-
 
 
 ## Challenges Encountered and Overcome
