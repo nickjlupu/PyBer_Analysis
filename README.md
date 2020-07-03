@@ -17,62 +17,70 @@ After the dataframes are merged, we can subset the data into additional datafram
 ![](analysis/subset.png)
 ![](analysis/countsmeans.png)
 
-
-From here we begin to look at summary statistics and develop box and whisker charts.  These charts are helpful in visualizing central tendencies, spread, and outliers in one image.  Pie charts are developed to show percentages of total fares, number of rides, and number of drivers by city type.  A summary dataframe is built, formatted, and displayed.  Finally, a multi-line chart is developed by organizing the data using pandas pivot_table and resample functions to create weekly bins of data.  A great deal of formatting was done to create an attractive chart.  
-
-### Results
-Fig. 1:<br>
+Assembling all of the bubble charts together provides an appealing approach to review multiple sets of data at once.
+**Fig. 1:**<br>
 
 ![](analysis/Fig1.png)
 
-Fig. 2:<br>
+From here we begin to look at summary statistics and develop box and whisker charts for ride counts, fares, and driver counts.  These charts are helpful in visualizing central tendencies, spread, and outliers in one image.  
+**Fig. 2:**<br>
 
 ![](analysis/Fig2.png)
 
-Fig. 3:<br>
+**Fig. 3:**<br>
 
 ![](analysis/Fig3.png)
 
-Fig. 4:<br>
+**Fig. 4:**<br>
 
 ![](analysis/Fig4.png)
 
-Fig. 5:<br>
+Pie charts are developed to show percentages of total fares, number of rides, and number of drivers by city type.  
+**Fig. 5:**<br>
 
 ![](analysis/Fig5.png)
 
-Fig. 6:<br>
+**Fig. 6:**<br>
 
 ![](analysis/Fig6.png)
 
-Fig. 7:<br>
+**Fig. 7:**<br>
 
 ![](analysis/Fig7.png)
 
-Fig. 8:<br>
+A summary dataframe is built, formatted, and displayed.  Finally, a multi-line chart is developed by organizing the data using pandas pivot_table and resample functions to create weekly bins of data.  A great deal of formatting was done to create an attractive chart.  
+
+### Results
+
+
+**Fig. 8:**<br>
 
 ![](analysis/Fig9.png)
 
 
 ### Summary
-As expected, there are fewer rides and fewer drivers in the rural and suburban areas as compared to the urban areas.  As shown in Fig. 9, As expected fares to increase as we move away from the urban areas since the rides in suburban and rural areas tend to cover greater distances.  
+As expected, there are fewer rides and fewer drivers in the rural and suburban areas as compared to the urban areas.  Fares increase as we move away from the urban areas since the rides in suburban and rural areas tend to cover greater distances.  <br>
 
-Fig. 9:<br>
+**Fig. 9:**<br>
 
-![](analysis/Fig8.png)
+![](analysis/Fig8.png)<br>
+
+
+
+
 
 
 ## Challenges Encountered and Overcome
 
 ### Challenges and Difficulties Encountered
 
-* Programming:  One of the largest programming challenges for me was figuring out that I did not need to "unpack" the Date column from the index in order to change its datatype to datetime.  This was accomplished with the code below.<br>
-
-![](analysis/PC1.png)
-
-* Programming:  Another challenge was researching and discovering the pandas pivot_table function.  This was used to reconfigure the dataframe to set up the weekly bins that would be used for plotting the multi-line chart.<br>
+* Programming:  One of the largest programming challenges for me was researching and discovering the pandas pivot_table function.  This was used to reconfigure the dataframe to set up the weekly bins by city type that would be used for plotting the multi-line chart.<br>
 
 ![](analysis/PC2.png)
+
+* Programming:  Another challenge was figuring out that I did not need to "unpack" the Date column from the index in order to change its datatype to datetime.  This was accomplished with the code below.<br>
+
+![](analysis/PC1.png)
 
 * Data analysis:  Once the datasets are merged, the number of drivers for each city is duplicated throughout the dataframe (i.e. each instance of a city will show the number of drivers).  To overcome this, we must use the city data dataframe to calculate the total number of drivers per city type.  If the programmer does not recognize this, there will be a large error in the results.<br>
 
@@ -88,6 +96,7 @@ Fig. 9:<br>
 ### Additional Analysis 1
 
 * Description of Approach
+In order to optimize the number of drivers 
 
 * Technical Steps
 
